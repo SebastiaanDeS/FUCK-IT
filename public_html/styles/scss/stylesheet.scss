@@ -87,6 +87,7 @@ header{
             background: var(--accent-color);
             transition: ease-in-out all 850ms;
             transform: translateX(100%);
+            z-index: 10;
     
             ul{
                 gap: 14px;
