@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --off-black: #191919;
+  --accent-color: #330000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+*:is(a, li) {
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+body body::-webkit-scrollbar {
+  width: 0px;
+}
+
+header h2 {
+  font-size: 24px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header h2::after {
+  content: "";
+  width: 110%;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+}
+header .nav-main {
+  padding: 24px;
+}
+header .nav-main h2 {
+  font-size: 30px;
+}
+header .nav-main ul {
+  gap: 30px;
+}
+header .nav-main a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+header .burger {
+  height: 42px;
+  width: 50px;
+  z-index: 20;
+  align-items: flex-end;
+  overflow: hidden;
+}
+header .burger .bar {
+  height: 7px;
+  border-radius: 16px;
+  background-color: #fff;
+  transition: all ease-in-out 300ms;
+}
+header .burger :nth-child(1) {
+  width: 95%;
+}
+header .burger :nth-child(2) {
+  width: 70%;
+}
+header .burger :nth-child(3) {
+  width: 45%;
+}
+header .burger:hover .bar {
+  width: 100%;
+}
+header .burger-nav {
+  background: var(--accent-color);
+  transition: ease-in-out all 850ms;
+  transform: translateX(100%);
+}
+header .burger-nav ul {
+  gap: 14px;
+}
+header .burger-nav a {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+}
+header .cross {
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: fixed;
+  right: 24px;
+}
+header .cross :nth-child(1) {
+  width: 100%;
+  transform: translateY(250%) rotate(45deg);
+}
+header .cross :nth-child(2) {
+  width: 100%;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+header .cross :nth-child(3) {
+  width: 100%;
+  transform: translateY(50%) rotate(-45deg);
+}
+header .active-nav {
+  transform: translateX(0%);
+}
+
+.hero {
+  background: var(--off-black);
+  color: #fff;
+}
+.hero h1 {
+  font-size: 70px;
+}
+.hero-img {
+  width: 550px;
+  z-index: 2;
+}
+
+.about {
+  padding: 20px;
+  min-height: 80svh;
+  gap: 40px;
+}
+.about h2 {
+  font-size: 60px;
+}
+.about p {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+footer {
+  min-height: 40svh;
+  background-color: var(--off-black);
+  color: #fff;
+  padding: 40px;
+}
+footer .footer-links {
+  gap: 70px;
+  margin-top: 50px;
+}
+footer .logo {
+  gap: 8px;
+}
+footer .logo img {
+  width: 80px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+footer h2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer h2::after {
+  content: "";
+  width: 110%;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+}
+footer h3 {
+  font-size: 20px;
+  margin-top: 12px;
+}
+footer h4 {
+  margin-top: 16px;
+}
+footer li {
+  margin-top: 10px;
+}
+footer li a {
+  color: #fff;
+  opacity: 0.5;
+}
+footer .copy-right {
+  margin-top: 60px;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* -------------------------- Utility Classes --------------------------*/
+.flex {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+.row-r {
+  flex-direction: row-reverse;
+}
+
+.col {
+  flex-direction: column;
+}
+.col-r {
+  flex-direction: column-reverse;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.jcc {
+  justify-content: center;
+}
+.jcb {
+  justify-content: space-between;
+}
+.jca {
+  justify-content: space-around;
+}
+.jce {
+  justify-content: space-evenly;
+}
+.jcstart {
+  justify-content: flex-start;
+}
+.jcend {
+  justify-content: flex-end;
+}
+
+.aic {
+  align-items: center;
+}
+.ais {
+  align-items: start;
+}
+.aie {
+  align-items: end;
+}
+
+.p-relative {
+  position: relative;
+}
+.p-absolute {
+  position: absolute;
+}
+.p-fixed {
+  position: fixed;
+}
+
+.t-0 {
+  top: 0;
+}
+
+.r-0 {
+  right: 0;
+}
+
+.b-0 {
+  bottom: 0;
+}
+
+.l-0 {
+  left: 0;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.vh-100 {
+  height: 100svh;
+}
+
+.min-vh-100 {
+  min-height: 100svh;
+}
+
+.w-50 {
+  width: 50%;
+}
+.w-100 {
+  width: 100%;
+}
+
+.square {
+  aspect-ratio: 1;
+}
+
+.obj-fit-fit-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.obj-fit-fit-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.obj-fit-fit-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.t-bold {
+  font-weight: bold;
+}
+.t-upper {
+  text-transform: uppercase;
+}
+.t-lower {
+  text-transform: lowercase;
+}
+.t-capitalize {
+  text-transform: capitalize;
+}
+
+.hidden {
+  display: none;
+  transition: 500ms;
+}/*# sourceMappingURL=stylesheet.css.map */

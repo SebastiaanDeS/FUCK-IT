@@ -1,0 +1,221 @@
+@import './extra/Imports.scss';
+
+:root{
+    --off-black: #191919;
+    --accent-color: #330000;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+
+    &:is(a, li){
+        text-decoration: none;
+        list-style: none;
+    }
+}
+body{
+    overflow-x: hidden;
+
+    body::-webkit-scrollbar{
+        width: 0px;
+    } 
+}
+
+//==================== Import different pages styles ====================
+header{
+    h2{
+        font-size: 24px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::after{
+            content: '';
+            width: 110%;
+            height: 5px;
+            background-color: white;
+            position: absolute;
+        }
+    }
+    .nav{
+        &-main{
+            padding: 24px;
+    
+            h2{
+                font-size: 30px;
+            }
+            ul{
+                gap: 30px;
+            }
+            a{
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+    }
+    .burger{
+        height: 42px;
+        width: 50px;
+        z-index: 20; 
+        align-items: flex-end;
+        overflow: hidden;
+        
+        .bar{
+            height: 7px;
+            border-radius: 16px;
+            background-color: #fff;
+            transition: all ease-in-out 300ms;
+
+        }
+        & :nth-child(1){
+            width: 95%;
+        }
+        & :nth-child(2){
+            width: 70%;
+        }
+        & :nth-child(3){
+            width: 45%;
+        }
+        &:hover .bar{
+            width: 100%;
+        }
+        &-nav {
+            background: var(--accent-color);
+            transition: ease-in-out all 850ms;
+            transform: translateX(100%);
+    
+            ul{
+                gap: 14px;
+            }
+            a{
+                color: #fff;
+                font-size: 40px;
+                font-weight: 700;
+            }
+        }
+    }
+    .cross{
+        align-items: flex-start;
+        justify-content: flex-start;
+        overflow: hidden;
+        position: fixed;
+        right: 24px;
+
+        & :nth-child(1){
+            width: 100%;
+            transform: translateY(250%) rotate(45deg);
+        }
+        & :nth-child(2){
+            width: 100%;
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        & :nth-child(3){
+            width: 100%;
+            transform: translateY(50%) rotate(-45deg);
+        }
+    }
+    .active-nav{
+        transform: translateX(0%);
+    }
+}
+.hero{
+    background: var(--off-black);
+    color: #fff;
+
+    h{      
+        &1{
+            font-size: 70px;
+        }
+    }
+    &-img{
+        width: 550px;
+        z-index: 2;
+    }
+}
+.about{
+    padding: 20px;
+    min-height: 80svh;
+    gap: 40px;
+
+    h2{
+        font-size: 60px;
+        // line-height: 80px;
+        
+        span{
+            // background-color: var(--off-black);
+            // color: #fff;
+            // padding: 3px 12px;
+        }
+    }
+    p{
+        font-size: 20px;
+        margin-top: 20px;
+    }
+}
+footer{
+    min-height: 40svh;
+    background-color: var(--off-black);
+    color: #fff;
+    padding: 40px;
+
+    .footer-links{
+        gap: 70px;
+        margin-top: 50px;
+    }
+
+    .logo{
+        gap: 8px;
+        
+        img{
+            width: 80px;
+            object-fit: contain;
+        }
+    }
+    h{
+        &2{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            &::after{
+                content: '';
+                width: 110%;
+                height: 3px;
+                background-color: white;
+                position: absolute;
+            }
+        }
+        &3{
+            font-size: 20px;
+            margin-top: 12px
+        }
+        &4{
+            margin-top: 16px
+        }
+    }
+    li{
+        margin-top: 10px;
+
+        a{
+            color: #fff;
+            opacity: .5;
+        }
+    }
+    .copy-right{
+        margin-top: 60px;
+        font-size: 12px;
+        opacity: .6;
+    }
+}
+@import './pages/LandingPage.scss'; // Landing Page
+
+//=======================================================================
+
+/* -------------------------- Utility Classes --------------------------*/
+@import './extra/UtilityClasses.scss'; // Utility Classes Page
