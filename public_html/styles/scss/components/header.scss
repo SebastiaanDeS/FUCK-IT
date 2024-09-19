@@ -30,8 +30,8 @@ header{
         }
     }
     .burger{
-        height: 42px;
-        width: 50px;
+        height: 36px;
+        width: 44px;
         z-index: 20; 
         align-items: flex-end;
         overflow: hidden;
@@ -42,7 +42,7 @@ header{
             opacity: 1;
         }
         &-nav {
-            background: var(--accent-color);
+            background: #fff;
             transition: ease-in-out all 850ms;
             transform: translateX(100%);
             z-index: 10;
@@ -69,8 +69,8 @@ header{
                 }
             }
             a{
-                color: #fff;
-                font-size: 48px;
+                color: var(--off-black);
+                font-size: 40px;
                 font-weight: 700;
                 opacity: .5;
                 position: relative;
@@ -79,7 +79,7 @@ header{
                     content: '';
                     height: 5px;
                     width: 0%;
-                    background-color: #fff;
+                    background-color: var(--off-black);
                     border-radius: 16px;
                     bottom: 0;
                     right: 0;
@@ -102,7 +102,7 @@ header{
             }
         }
         .bar{
-            height: 7px;
+            height: 6px;
             border-radius: 16px;
             background-color: #fff;
             transition: all ease-in-out 300ms;
@@ -128,6 +128,10 @@ header{
         overflow: hidden;
         position: fixed;
         right: 24px;
+
+        .bar {
+            background-color: var(--off-black);
+        }
 
         & :nth-child(1){
             width: 100%;

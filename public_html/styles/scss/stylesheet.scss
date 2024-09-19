@@ -44,9 +44,50 @@ body{
     }
 }
 .about{
-    padding: 40px;
+    padding: 60px 40px;
     min-height: 80svh;
-    gap: 40px;
+    gap: 60px;
+    
+    &-txt{
+        width: 45%;
+    }
+    &-more{
+        font-size: 18px;
+        color: var(--off-black);
+        font-weight: 500;
+        transition: all ease-in-out 250ms;
+
+        &::after{
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: var(--off-black);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translateY(150%);
+            transition: all ease-in-out 300ms;
+        }
+
+        &:hover{
+            opacity: .8;
+
+            &::after{
+                width: 0%;
+            }
+        }
+    }
+    h{
+        &2{
+            font-size: 60px;
+        }
+    }
+    p{
+        margin-top: 40px;
+        margin-bottom: 30px;
+        font-size: 20px;
+        opacity: .6;
+    }
 }
 
 //==================== Import different extra styles ====================
