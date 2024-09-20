@@ -14,4 +14,4 @@ I believe the best way to learn is by doing, and this project gives me a platfor
 - Hostinger: The hosting platform I'm using to learn about deployment.
 
 ### **Contributions**
-This project is for my personal learning journey, but feel free to fork, explore, and even drop feedback if you’re interested!
+This project is a learning journey, and I’m open to adding people if they’re interested! If you'd like to contribute or have suggestions, feel free to reach out. You can contact me at support@fuck-it.eu.
