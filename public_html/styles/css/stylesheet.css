@@ -85,6 +85,13 @@ header .burger-nav .about-icon::before {
   margin-right: 15px;
   transition: all 300ms ease-in-out;
 }
+header .burger-nav .hall-icon::before {
+  content: "\f19c";
+  font-family: "FontAwesome";
+  font-size: 0px;
+  margin-right: 15px;
+  transition: all 300ms ease-in-out;
+}
 header .burger-nav a {
   color: #fff;
   font-size: 40px;
