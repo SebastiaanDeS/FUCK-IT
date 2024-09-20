@@ -17,22 +17,25 @@ footer{
             display: flex;
             justify-content: center;
             align-items: center;
+            color: var(--accent-color);
     
             &::after{
                 content: '';
                 width: 110%;
                 height: 3px;
-                background-color: white;
+                background-color: var(--accent-color);
                 position: absolute;
                 border-radius: 200px;
             }
         }
         &3{
+            color: var(--accent-color);
             font-size: 20px;
-            margin-top: 12px
+            margin-top: 12px;
         }
         &4{
-            margin-top: 16px
+            color: var(--accent-color);
+            margin-top: 16px;
         }
     }
     li{
@@ -59,7 +62,8 @@ footer{
 
             &:hover {
                 opacity: 1;
-
+                color: #fff;
+                
                 &::after{
                     width: 100%;
                 }
@@ -69,7 +73,7 @@ footer{
     .copy-right{
         margin-top: 60px;
         font-size: 12px;
-        opacity: .6;
+        opacity: .4;
         text-align: right;
     }
 }

@@ -2,6 +2,7 @@ header{
     h{
         &2{
             font-size: 24px;
+            color: var(--accent-color);
             position: relative;
             display: flex;
             justify-content: center;
@@ -10,8 +11,8 @@ header{
             &::after{
                 content: '';
                 width: 110%;
-                height: 5px;
-                background-color: white;
+                height: 4px;
+                background-color: var(--accent-color);
                 position: absolute;
                 border-radius: 200px;
             }
@@ -36,13 +37,13 @@ header{
         align-items: flex-end;
         overflow: hidden;
         transition: all ease-in-out 250ms;
-        opacity: .5;
+        opacity: .7;
 
         &:hover{
             opacity: 1;
         }
         &-nav {
-            background: #fff;
+            background: var(--accent-color);
             transition: ease-in-out all 850ms;
             transform: translateX(100%);
             z-index: 10;
@@ -69,7 +70,7 @@ header{
                 }
             }
             a{
-                color: var(--off-black);
+                color: #fff;
                 font-size: 40px;
                 font-weight: 700;
                 opacity: .5;
@@ -79,7 +80,7 @@ header{
                     content: '';
                     height: 5px;
                     width: 0%;
-                    background-color: var(--off-black);
+                    background-color: #fff;
                     border-radius: 16px;
                     bottom: 0;
                     right: 0;
@@ -91,7 +92,7 @@ header{
                     opacity: 1;
 
                     &:before{
-                        color: var(--primary-color);
+                        color: #fff;
                         text-align: center;
                         font-size: 32px;
                     }
@@ -128,9 +129,10 @@ header{
         overflow: hidden;
         position: fixed;
         right: 24px;
+        opacity: .5;
 
-        .bar {
-            background-color: var(--off-black);
+        .bar{
+            background-color: #fff;
         }
 
         & :nth-child(1){

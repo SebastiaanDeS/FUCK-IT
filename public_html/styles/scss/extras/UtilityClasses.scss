@@ -53,6 +53,17 @@
         align-items: end;
     }
 }
+.as{
+    &c{
+        align-self: center;
+    }
+    &s{
+        align-self: flex-start;
+    }
+    &e{
+        align-self: flex-end;
+    }
+}
 //------------------- Position -------------------
 .p{
     &-relative{
@@ -91,7 +102,13 @@
     height: 100lvh;
 }
 .min-vh-100{
+    min-height: 100vh;
+}
+.min-svh-100{
     min-height: 100svh;
+}
+.min-lvh-100{
+    min-height: 100lvh;
 }
 .w{
     &-50{
