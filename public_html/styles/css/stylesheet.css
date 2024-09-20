@@ -9,6 +9,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 *:is(a, li) {
   text-decoration: none;
@@ -290,6 +291,7 @@ footer .copy-right {
   min-height: 80svh;
   gap: 60px;
   background-color: #fff;
+  scroll-snap-align: center;
 }
 .about-txt {
   width: 45%;
