@@ -1,7 +1,7 @@
 const burger = document.querySelector('.burger');
 const burgerNav = document.querySelector('.burger-nav');
 
-burger.addEventListener('click', function() {
+function toggleNavigation() {
     burger.classList.toggle('cross');
     burgerNav.classList.toggle('active-nav');
-});
+}
