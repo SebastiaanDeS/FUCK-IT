@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --off-black: #191919;
-  --accent-color: #330000;
+  --accent-color: #7c0000;
 }
 
 * {
@@ -20,11 +20,13 @@
 
 body {
   overflow-x: hidden;
+  background-color: var(--off-black);
 }
 
 /* -------------------------- Header --------------------------*/
 header h2 {
   font-size: 24px;
+  color: var(--accent-color);
   position: relative;
   display: flex;
   justify-content: center;
@@ -33,8 +35,8 @@ header h2 {
 header h2::after {
   content: "";
   width: 110%;
-  height: 5px;
-  background-color: white;
+  height: 4px;
+  background-color: var(--accent-color);
   position: absolute;
   border-radius: 200px;
 }
@@ -48,13 +50,13 @@ header .nav-main ul {
   gap: 30px;
 }
 header .burger {
-  height: 42px;
-  width: 50px;
+  height: 36px;
+  width: 44px;
   z-index: 20;
   align-items: flex-end;
   overflow: hidden;
   transition: all ease-in-out 250ms;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 header .burger:hover {
   opacity: 1;
@@ -84,7 +86,7 @@ header .burger-nav .about-icon::before {
 }
 header .burger-nav a {
   color: #fff;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
   opacity: 0.5;
   position: relative;
@@ -105,7 +107,7 @@ header .burger-nav a:hover {
   opacity: 1;
 }
 header .burger-nav a:hover:before {
-  color: var(--primary-color);
+  color: #fff;
   text-align: center;
   font-size: 32px;
 }
@@ -113,7 +115,7 @@ header .burger-nav a:hover::after {
   width: 100%;
 }
 header .burger .bar {
-  height: 7px;
+  height: 6px;
   border-radius: 16px;
   background-color: #fff;
   transition: all ease-in-out 300ms;
@@ -136,6 +138,10 @@ header .cross {
   overflow: hidden;
   position: fixed;
   right: 24px;
+  opacity: 0.5;
+}
+header .cross .bar {
+  background-color: #fff;
 }
 header .cross :nth-child(1) {
   width: 100%;
@@ -173,20 +179,23 @@ footer h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--accent-color);
 }
 footer h2::after {
   content: "";
   width: 110%;
   height: 3px;
-  background-color: white;
+  background-color: var(--accent-color);
   position: absolute;
   border-radius: 200px;
 }
 footer h3 {
+  color: var(--accent-color);
   font-size: 20px;
   margin-top: 12px;
 }
 footer h4 {
+  color: var(--accent-color);
   margin-top: 16px;
 }
 footer li {
@@ -212,6 +221,7 @@ footer li a::after {
 }
 footer li a:hover {
   opacity: 1;
+  color: #fff;
 }
 footer li a:hover::after {
   width: 100%;
@@ -219,13 +229,56 @@ footer li a:hover::after {
 footer .copy-right {
   margin-top: 60px;
   font-size: 12px;
-  opacity: 0.6;
+  opacity: 0.4;
   text-align: right;
 }
 
 /* -------------------------- Landing Page --------------------------*/
+.hall {
+  padding: 175px 40px 40px;
+  color: #fff;
+  width: 75%;
+  margin-inline: auto;
+}
+.hall h1 {
+  font-size: 60px;
+  text-align: center;
+}
+.hall h3 {
+  font-size: 70px;
+  opacity: 0.1;
+}
+.hall p {
+  font-weight: 500;
+  font-size: 16px;
+}
+.hall .timeline {
+  width: 4px;
+  background-color: #fff;
+  height: 100%;
+  border-radius: 16px;
+}
+.hall-people {
+  margin-top: 80px;
+  gap: 80px;
+}
+.hall-person {
+  margin-top: 70px;
+}
+.hall .circle {
+  height: 26px;
+  border-radius: 200px;
+  border: solid 4px #fff;
+  background-color: var(--off-black);
+}
+.hall .ase .circle {
+  transform: translateX(-50%);
+}
+.hall .ass .circle {
+  transform: translateX(50%);
+}
+
 .hero {
-  background: var(--off-black);
   color: #fff;
 }
 .hero h1 {
@@ -233,9 +286,45 @@ footer .copy-right {
 }
 
 .about {
-  padding: 40px;
+  padding: 60px 40px;
   min-height: 80svh;
-  gap: 40px;
+  gap: 60px;
+  background-color: #fff;
+}
+.about-txt {
+  width: 45%;
+}
+.about-more {
+  font-size: 18px;
+  color: var(--off-black);
+  font-weight: 500;
+  transition: all ease-in-out 250ms;
+}
+.about-more::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--off-black);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(150%);
+  transition: all ease-in-out 300ms;
+}
+.about-more:hover {
+  opacity: 0.8;
+}
+.about-more:hover::after {
+  width: 0%;
+}
+.about h2 {
+  font-size: 60px;
+}
+.about p {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  opacity: 0.6;
 }
 
 /* -------------------------- Utility Classes --------------------------*/
@@ -294,6 +383,16 @@ footer .copy-right {
   align-items: end;
 }
 
+.asc {
+  align-self: center;
+}
+.ass {
+  align-self: flex-start;
+}
+.ase {
+  align-self: flex-end;
+}
+
 .p-relative {
   position: relative;
 }
@@ -328,8 +427,24 @@ footer .copy-right {
   height: 100svh;
 }
 
+.svh-100 {
+  height: 100svh;
+}
+
+.lvh-100 {
+  height: 100lvh;
+}
+
 .min-vh-100 {
+  min-height: 100vh;
+}
+
+.min-svh-100 {
   min-height: 100svh;
+}
+
+.min-lvh-100 {
+  min-height: 100lvh;
 }
 
 .w-50 {

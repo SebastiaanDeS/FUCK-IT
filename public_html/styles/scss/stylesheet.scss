@@ -2,7 +2,7 @@
 
 :root{
     --off-black: #191919;
-    --accent-color: #330000;
+    --accent-color: #7c0000;
 }
 *{
     margin: 0;
@@ -20,6 +20,7 @@
 }
 body{
     overflow-x: hidden;
+    background-color: var(--off-black)
 }
 
 //==================== Import different components styles ====================
@@ -32,9 +33,57 @@ body{
 //==================== Import different pages styles ====================
 /* -------------------------- Landing Page --------------------------*/
 @import './pages/LandingPage.scss'; // Landing Page
+.hall{
+    padding: 175px 40px 40px;
+    color: #fff;
+    width: 75%;
+    margin-inline: auto;
 
+    h{
+        &1{
+            font-size: 60px;
+            text-align: center;
+        }
+        &3{
+            font-size: 70px;
+            opacity: .1;
+        }
+    }
+    p{
+        font-weight: 500;
+        font-size: 16px;
+    }
+    .timeline{
+        width: 4px;
+        background-color: #fff;
+        height: 100%;
+        border-radius: 16px;
+    }
+    &-people{
+        margin-top: 80px;
+        gap: 80px;
+    }
+    &-person{
+        margin-top: 70px;
+    }
+    .circle{
+        height: 26px;
+        border-radius: 200px;
+        border: solid 4px #fff;
+        background-color: var(--off-black);
+    }
+    .ase{
+        .circle{
+            transform: translateX(-50%);
+        }
+    }
+    .ass{
+        .circle{
+            transform: translateX(50%);
+        }
+    }
+}
 .hero{
-    background: var(--off-black);
     color: #fff;
 
     h{      
@@ -44,9 +93,51 @@ body{
     }
 }
 .about{
-    padding: 40px;
+    padding: 60px 40px;
     min-height: 80svh;
-    gap: 40px;
+    gap: 60px;
+    background-color: #fff;
+    
+    &-txt{
+        width: 45%;
+    }
+    &-more{
+        font-size: 18px;
+        color: var(--off-black);
+        font-weight: 500;
+        transition: all ease-in-out 250ms;
+
+        &::after{
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: var(--off-black);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translateY(150%);
+            transition: all ease-in-out 300ms;
+        }
+
+        &:hover{
+            opacity: .8;
+
+            &::after{
+                width: 0%;
+            }
+        }
+    }
+    h{
+        &2{
+            font-size: 60px;
+        }
+    }
+    p{
+        margin-top: 40px;
+        margin-bottom: 30px;
+        font-size: 20px;
+        opacity: .6;
+    }
 }
 
 //==================== Import different extra styles ====================

@@ -2,6 +2,7 @@ header{
     h{
         &2{
             font-size: 24px;
+            color: var(--accent-color);
             position: relative;
             display: flex;
             justify-content: center;
@@ -10,8 +11,8 @@ header{
             &::after{
                 content: '';
                 width: 110%;
-                height: 5px;
-                background-color: white;
+                height: 4px;
+                background-color: var(--accent-color);
                 position: absolute;
                 border-radius: 200px;
             }
@@ -30,13 +31,13 @@ header{
         }
     }
     .burger{
-        height: 42px;
-        width: 50px;
+        height: 36px;
+        width: 44px;
         z-index: 20; 
         align-items: flex-end;
         overflow: hidden;
         transition: all ease-in-out 250ms;
-        opacity: .5;
+        opacity: .7;
 
         &:hover{
             opacity: 1;
@@ -70,7 +71,7 @@ header{
             }
             a{
                 color: #fff;
-                font-size: 48px;
+                font-size: 40px;
                 font-weight: 700;
                 opacity: .5;
                 position: relative;
@@ -91,7 +92,7 @@ header{
                     opacity: 1;
 
                     &:before{
-                        color: var(--primary-color);
+                        color: #fff;
                         text-align: center;
                         font-size: 32px;
                     }
@@ -102,7 +103,7 @@ header{
             }
         }
         .bar{
-            height: 7px;
+            height: 6px;
             border-radius: 16px;
             background-color: #fff;
             transition: all ease-in-out 300ms;
@@ -128,6 +129,11 @@ header{
         overflow: hidden;
         position: fixed;
         right: 24px;
+        opacity: .5;
+
+        .bar{
+            background-color: #fff;
+        }
 
         & :nth-child(1){
             width: 100%;
