@@ -2,7 +2,7 @@ header{
     h{
         &2{
             font-size: 24px;
-            color: var(--accent-color);
+            color: #fff;
             position: relative;
             display: flex;
             justify-content: center;
@@ -12,7 +12,7 @@ header{
                 content: '';
                 width: 110%;
                 height: 4px;
-                background-color: var(--accent-color);
+                background-color: #fff;
                 position: absolute;
                 border-radius: 200px;
             }
